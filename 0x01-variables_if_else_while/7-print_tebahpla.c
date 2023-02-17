@@ -9,9 +9,9 @@ int main(void)
 	char la;
 
 	for (la = 'z'; la >= 'a'; la--)
-		putchar(lr);
+		putchar(la);
 
-	putchar('\n')
+	putchar('\n');
 
 	return (0);
 }
