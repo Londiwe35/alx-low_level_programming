@@ -6,22 +6,28 @@
  */
 int main(void)
 {
-	int g, x;
+	int g;
+	int x = 0;
 
-	for (g = '0'; g < '9'; g++)
+	while (x < 10)
 	{
-		for (x = g + 1; x <= '0'; x++)
+		g = 0;
+		while (g < 10)
 		{
-			if (x != g)
+			if (x != g && x < g)
 			{
-				putchar(g);
-				putchar(x);
-				if (g == '8' && x == '9')
-				continue;
-				putchar(',');
-				putchar(' ');
+				putchar('0' + x);
+				putchar('0' + g);
+
+				if (g + x != 17)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
+			g++;
 		}
+		x++;
 	}
 	putchar('\n');
 
