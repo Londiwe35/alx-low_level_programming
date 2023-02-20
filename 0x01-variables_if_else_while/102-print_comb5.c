@@ -6,42 +6,22 @@
  */
 int main(void)
 {
-	int k = 0;
-	int p_o;
-	int l_m;
+	int p, q;
 
-	int j2;
-	int h_v2;
-	int z_v2;
-
-	while (k <= 98)
+	for (p = 0; p <= 98; p++)
 	{
-		p_o = (k / 10 + '0');
-		l_m = (k % 10 + '0');
-		j2 = 0;
-		while (j2 <= 99)
+		for (q = p + 1; q <= 99; q++)
 		{
-			h_v2 = (j2 / 10 + '0');
-			z_v2 = (j2 % 10 + '0');
-
-			if (k < j2)
-			{
-				putchar(p_o);
-				putchar(l_m);
-				putchar(' ');
-				putchar(h_v2);
-				putchar(z_v2);
-
-				if (c != 98)
-				{
-					putchar(',');
-					putchar(' ');
-				}
-
-			}
-			j2++
+			putchar((p / 10) + '0');
+			putchar((p % 10) + '0');
+			putchar(' ');
+			putchar((q / 10) + '0');
+			putchar((q % 10) + '0');
+			if (p == 98 && q == 99)
+				continue;
+			putchar(',');
+			putchar(' ');
 		}
-		k++
 	}
 	putchar('\n');
 
