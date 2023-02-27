@@ -2,18 +2,16 @@
 
 /**
  * _strlen - will return the length of a string
- * @s: string to be evaluated
- * Return: length of the string
+ * @str: string to be evaluated
+ * Return: length of @str
  */
 
-int _strlen(char *s)
+size_t _strlen(cont char *str)
 {
-	int c = 0
+	size_t length = 0;
 
-		while (*s != '\0')
-		{
-			s++;
-			x++;
-		}
-	return (x);
+	while (*str++)
+		length++;
+
+	return (length);
 }
