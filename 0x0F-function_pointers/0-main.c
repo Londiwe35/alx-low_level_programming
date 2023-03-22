@@ -2,10 +2,8 @@
 #include "function_pointers.h"
 
 /**
- * print_name_as_is - prints a name as is
- * @name: name of the person
- *
- * Return: Nothing.
+ * print_name_as_is - prints name as is
+ * @name: name of person
  */
 void print_name_as_is(char *name)
 {
@@ -14,19 +12,17 @@ void print_name_as_is(char *name)
 
 /**
  * print_name_uppercase - print a name in uppercase
- * @name: name of the person
- *
- * Return: Nothing.
+ * @name: name of person
  */
 void print_name_uppercase(char *name)
 {
 	unsigned int i;
 
 	printf("Hello, my uppercase name is ");
-	i = 0
+	i = 0;
 	while (name[i])
 	{
-		if (name[i] >= 'a' && name[i] <= 'z')
+		if (name[i] >= 'a' && name[i] < 'z')
 		{
 			putchar(name[i] + 'A' - 'a');
 		}
