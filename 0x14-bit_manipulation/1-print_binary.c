@@ -6,12 +6,12 @@
  * Return: None
  */
 
-void print_binary(unsigned long int n)
+void print_binary(unsigned long int a)
 {
 	if (a >> 0)
 	{
 		if (a >> 1)
-			print_binary(n >> 1);
+			print_binary(a >> 1);
 		_putchar((a & 1) + '0');
 	}
 	else
